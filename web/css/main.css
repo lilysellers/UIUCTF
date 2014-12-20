@@ -9,7 +9,7 @@
 }
 
 .contentbox {
-    font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
+    font-family: 'Anonymous Pro',monospace;
     padding-top: 15px;
     padding-bottom: 30px;
     margin-bottom: 30px;
@@ -53,10 +53,10 @@ hr {
 
 .navbar-inner {
     max-width: 1250px;
-
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 2px solid #555;
     padding: 5px 0px 5px 0px;
-
-    margin: 0 auto;
+    margin: 10px auto;
 
     filter: none;
 }
@@ -66,19 +66,29 @@ hr {
 }
 
 .navbar .brand {
-    font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
-    font-size: 2.5em;
-    font-weight: inherit;
+    font-family: 'Anonymous Pro',monospace;
+    font-size: 50px; 
+    font-weight: bold;
     text-shadow: inherit;
-
+    margin-left: 0;
     margin-right: 20px;
+    vertical-align: none;
+    color: orange;
+}
+
+.navbar .brand img{
+    margin:0 0 0 -15%;
+    text-align: 0;
+    display:inline;
+    vertical-align:baseline;
 }
 
 .navbar .nav li, .navbar .nav li a {
     text-transform: uppercase;
-    font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
+    font-family: 'Anonymous Pro',monospace;
     font-size: 1em;
     text-shadow: inherit;
+    color:orange;
 }
 
 .navbar .nav li a:hover, .navbar .nav .active a:hover {
@@ -99,10 +109,9 @@ hr {
 
 .footer {
     text-align: center;
-
     padding-top: 1em;
-
     margin-top: 3em;
+    font-size:11px;
 }
 
 
