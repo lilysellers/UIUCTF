@@ -7,4 +7,5 @@ sudo systemctl start mongodb.service
 sudo systemctl start memcached.service
 
 cd ../api
+sleep 3
 python2 ./api.py & disown

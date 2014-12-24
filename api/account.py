@@ -32,13 +32,13 @@ def register_team(request):
     """
     email = request.form.get('email', '')
     teamname = request.form.get('team', '')
-    adviser = request.form.get('name', '')
+    #adviser = request.form.get('name', '')
     affiliation = request.form.get('aff', '')
     pwd = request.form.get('pass', '')
     gname = request.form.get('group', '').lower().strip('')
     joingroup = request.form.get('joingroup', '')
 
-    if '' in {email, teamname, adviser, affiliation, pwd}:
+    if '' in {email, teamname, pwd}:
         return {'status': 0, 'message': "Please fill in all of the required fields."}
     if db.teams.find({'teamname': teamname}).count() != 0:
         return {'status': 0, 'message': "That team name is already registered."}
@@ -48,7 +48,6 @@ def register_team(request):
 
     tid = common.token()
     db.teams.insert({'email': str(email),
-                     'advisor': str(adviser),
                      'teamname': str(teamname),
                      'affiliation': str(affiliation),
                      'pwhash': bcrypt.hashpw(str(pwd), bcrypt.gensalt(8)),
@@ -84,20 +83,20 @@ def update_password(tid, request):
     return {'status': 1, 'message': "Success! Your password has been updated."}
 
 
-def get_ssh_account(tid):
-    """Get a webshell account.
-
-    Searches the sshaccts collection for a document that has the current team's tid, if one is found the creds are
-    returned. If no ssh account is associated with the user an account with no tid is selected and assigned to the
-    current team. The credentials are then returned. If no unused accounts are found an error email is sent to the
-    admin_emails list and an error is returned.
-    """
-    sshacct = db.sshaccts.find_one({'tid': tid})
-    if sshacct is not None:
-        return {'username': sshacct['user'], 'password': sshacct['password']}
-    sshacct = db.sshaccts.find_one({'$or': [{'tid': ''}, {'tid': {'$exists': False}}]})
-    if sshacct is not None:
-        db.sshaccts.update({'_id': sshacct['_id']}, {'$set': {'tid': tid}})
-        return {'username': sshacct['user'], 'password': sshacct['password']}
-    else:
-        common.log('No free SSH accounts were found in the database.')
+#def get_ssh_account(tid):
+#    """Get a webshell account.
+#
+#    Searches the sshaccts collection for a document that has the current team's tid, if one is found the creds are
+#    returned. If no ssh account is associated with the user an account with no tid is selected and assigned to the
+#    current team. The credentials are then returned. If no unused accounts are found an error email is sent to the
+#    admin_emails list and an error is returned.
+#    """
+#    sshacct = db.sshaccts.find_one({'tid': tid})
+#    if sshacct is not None:
+#        return {'username': sshacct['user'], 'password': sshacct['password']}
+#    sshacct = db.sshaccts.find_one({'$or': [{'tid': ''}, {'tid': {'$exists': False}}]})
+#    if sshacct is not None:
+#        db.sshaccts.update({'_id': sshacct['_id']}, {'$set': {'tid': tid}})
+#        return {'username': sshacct['user'], 'password': sshacct['password']}
+#    else:
+#        common.log('No free SSH accounts were found in the database.')

@@ -1,10 +1,8 @@
 var tabsLI = [
-    ['compete', 'Game'],
-    ['irc', 'chat'],
-    ['webshell', 'Shell'],
+    ['problems', 'Challenges'],
+    ['irc', 'Chat'],
     ['scoreboard', 'Scoreboard'],
     ['news', 'News'],
-    ['learn', 'Learn'],
     ['faq', 'FAQ'],
     ['account', 'Account'],
     ['logout', 'Logout']
@@ -15,14 +13,12 @@ var tabsNLI = [
     ['faq', 'FAQ'],
     ['registration', 'Registration'],
     ['news', 'News'],
-    ['learn', 'Learn'],
     ['contact', 'Contact'],
     ['login', 'Login']
 ];
 var tabsFail = [
     ['about', 'About'],
     ['faq', 'FAQ'],
-    ['learn', 'Learn'],
     ['contact', 'Contact']
 ];
 

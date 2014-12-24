@@ -48,6 +48,35 @@ hr {
     border-color: white;
 }
 
+.btn-primary {
+    background-image: none;
+    background-repeat: repeat;
+    border-color: currentColor;
+    color:white;
+    text-shadow:none;
+}
+
+.btn {
+    background-color:#006dcc;
+    background-image: none;
+    background-repeat: repeat;
+    border-color: currentColor;
+    border-image-source: none;
+    border-image-slice: 100%;
+    border-image-width: 1;
+    border-image-outset: 0s;
+    border-image-repeat: stretch;
+    color:white;
+    text-shadow:none;
+    border-radius:0;
+}
+
+select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+    border-radius:2px;
+}
+
+
+
 /* Navigation Bar */
 
 
@@ -103,6 +132,11 @@ hr {
     background-color: inherit;
     box-shadow: inherit;
     text-decoration: underline;
+}
+
+/*Twitter feed */
+#twitter-widget-0 {
+    margin-left:5em;
 }
 
 /* Footer */
