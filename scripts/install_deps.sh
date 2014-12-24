@@ -40,7 +40,7 @@ elif command -v pacman >/dev/null 2>&1;then
     # the debian packages above for what you might be missing. 
 
     sudo pacman -Syyu --noconfirm
-    sudo pamcan -S --noconfirm unzip nginx memcached libmemcached mongodb python2 git exiv2 python2-pip
+    sudo pacman -S --noconfirm unzip nginx memcached libmemcached mongodb python2 git exiv2 python2-pip
     sudo pip2 install --upgrade virtualenv
     sudo pip2 install Flask
     sudo pip2 install watchdog -U
