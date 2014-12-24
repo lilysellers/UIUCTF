@@ -1,5 +1,7 @@
-CTF-Platform
+UIUCTF 
 ============
+
+The source code for the UIUCTF website.
 
 A genericized version of picoCTF 2013 that can be easily adapted to host 
 CTF or programming competitions.
@@ -53,7 +55,6 @@ session cookie domain was 'picoctf.com'.
 Ensure that the SESSION_COOKIE_DOMAIN matches the domain on which 
 users access the site according to the same-origin policy. 127.0.0.1 is 
 not compatible with localhost.
-
 
 Database
 ------------
