@@ -4,8 +4,8 @@
 
 
 @font-face {
-    font-family: "Anonymous Pro";
-    src: url(css/anon.ttf);
+    font-family: 'Anonymous Pro';
+    src: url(anon.ttf);
 }
 
 /** Containers **/
@@ -17,7 +17,7 @@
 }
 
 .contentbox {
-    font-family: 'Anonymous Pro',monospace;
+    font-family: 'Anonymous Pro', 'consolas', monospace;
     padding-top: 15px;
     padding-bottom: 30px;
     margin-bottom: 30px;
@@ -103,7 +103,7 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
 }
 
 .navbar .brand {
-    font-family: 'Anonymous Pro',monospace;
+    font-family: 'Anonymous Pro', 'consolas', monospace;
     font-size: 50px; 
     font-weight: bold;
     text-shadow: inherit;
@@ -122,7 +122,7 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
 
 .navbar .nav li, .navbar .nav li a {
     text-transform: uppercase;
-    font-family: 'Anonymous Pro',monospace;
+    font-family: 'Anonymous Pro', 'consolas', monospace;
     font-size: 1em;
     text-shadow: inherit;
     color:orange;
