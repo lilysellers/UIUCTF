@@ -39,8 +39,8 @@ def send_email(recip, subject, body):
         msg['To'] = recip
         part1 = MIMEText(body, 'plain')
         msg.attach(part1)
-        s = smtplib.SMTP_SSL(smtp_url)
-        s.login(email_username, email_password)
+        s = smtplib.SMTP(smtp_url, 25)
+        #s.login(email_username, email_password)
         s.sendmail(from_addr, recip, msg.as_string())
         s.quit()
     else:
